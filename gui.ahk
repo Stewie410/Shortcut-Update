@@ -8,8 +8,7 @@
 #SingleInstance Force
 #Persistent
 #NoEnv
-#Warn All
-#Warn UseUnsetLocal, Off
+;#Warn All
 SetWorkingDir, %A_ScriptDir%
 FileEncoding UTF-8
 SetBatchLines, -1
@@ -35,6 +34,7 @@ OnExit("cleanup")
 ; --------------------------------------------------------
 ; Build GUI
 Gui, +HWNDhParent +LastFound -Resize +OwnDialogs
+Gui, +AlwaysOnTop
 Gui, Margin, 0, 0
 Gui, Color, F7F7F7
 Gui, Font, c000000, Arial

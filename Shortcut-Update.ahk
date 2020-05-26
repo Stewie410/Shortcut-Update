@@ -9,7 +9,7 @@ update(path, search, replace, recurse := false) {
 	loop, files, %path%\*.lnk, % "F" (recurse ? "R" : "")
 	{
 		FileGetShortcut, %A_LoopFileFullPath%, target, working
-		if RegExMatch(target, search)
+		if (target ~= search)
 			redirect(A_LoopFileFullPath, target, working, search, replace, wshell)
 	}
 }
